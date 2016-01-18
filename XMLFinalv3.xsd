@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!--Beginning of Root Element-->
+<xs:element name="Friends">
+     <xs:complexType>
+     <xs:sequence>
+     <!--Definition of Person Element-->
+              <xs:element name="Person" minOccurs="0" maxOccurs="unbounded">
+                   <xs:complexType>
+                   <xs:sequence>
+                      <xs:element minOccurs="1" maxOccurs="1" name="Social" type="SocialType"/>
+                      <xs:element minOccurs="1" maxOccurs="1" name="First" type="xs:token"/>
+                      <xs:element minOccurs="1" maxOccurs="1" name="Last" type="xs:token"/>
+		      <xs:element minOccurs="0" maxOccurs="1" name="Birthday" type="BirthdayType"/>
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="Phone" type="PhoneType"/>
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" type="AddressType"/> 
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="Email" type="xs:token"/> 
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="IM" type="IMType"/>
+                    </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                    <!--End of Person Element-->
+     </xs:sequence>
+	 </xs:complexType>  
+
+</xs:element>	
+<!--End of Root Element-->
+
+   <!--Defines Social Type-->
+   
+   <xs:complexType name="SocialType">
+     <xs:simpleContent>
+        <xs:extension base="xs:token">
+           <xs:attribute name="Gender" type="GenderType" use="required"/>
+        </xs:extension>
+     </xs:simpleContent>
+  </xs:complexType> 
+  
+      <!--Defines Gender Type and forces a male or female designtation-->
+          <xs:simpleType name="GenderType">
+            <xs:restriction base="xs:string">
+            <xs:pattern value="Male|Female"/>
+            </xs:restriction>
+          </xs:simpleType>
+
+           
+
+                <!--Defines Phone Types and forces a type designation-->		 
+                     <xs:complexType name="PhoneType">
+                     <xs:simpleContent>
+                     <xs:extension base="xs:token">
+                       <xs:attribute name="Type" type="xs:token" use="required"/>
+                     </xs:extension>
+                     </xs:simpleContent>
+                    </xs:complexType>
+                    
+                    
+    
+  <!--Defines Address Type parameters-->                  
+  <xs:complexType name="AddressType">
+    <xs:sequence> 
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Street" type="xs:token"/> 
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" type="xs:token"/> 
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="State" type="StateType"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PostalCode" type="ZipType"/> 
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Country" type="xs:token"/> 
+    </xs:sequence>
+  </xs:complexType> 
+					
+	<!--Defines Birthday Type and restricts date to prior to 1995-->				
+	<xs:simpleType name="BirthdayType">
+	   <xs:restriction base="xs:date">
+	      <xs:maxInclusive value="1995-01-01"/>
+	   </xs:restriction>
+	</xs:simpleType>
+	
+	<!--Defines StateType-->
+	<xs:simpleType  name="StateType">
+     <xs:restriction base="xs:string">
+       <xs:pattern value="[A-Z][A-Z]"/>
+     </xs:restriction>
+   </xs:simpleType>
+	
+	<!--Defines ZipType-->
+  <xs:simpleType name="ZipType">
+     <xs:restriction base="xs:integer">
+       <xs:pattern value="[0-9][0-9][0-9][0-9][0-9]"/>
+     </xs:restriction>
+   </xs:simpleType>
+
+	<!--Defines IM Type-->
+	<xs:complexType name="IMType">
+     <xs:simpleContent>
+        <xs:extension base="xs:token">
+           <xs:attribute name="Service" type="IMServiceType" use="required"/>
+        </xs:extension>
+     </xs:simpleContent>
+  </xs:complexType> 
+  
+  <!--Defines Service Type and restricts to known IM providers-->
+   <xs:simpleType name="IMServiceType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AIM"/> 
+      <xs:enumeration value="Google"/> 
+      <xs:enumeration value="MSN"/>
+      <xs:enumeration value="Yahoo"/> 
+      <xs:enumeration value="Skype"/> 
+      <xs:enumeration value="ICQ"/>
+      <xs:enumeration value="Facebook"/>
+      <xs:enumeration value="AOL"/>
+      <xs:enumeration value="Jabber"/>
+    </xs:restriction>
+  </xs:simpleType>
+	
+
+</xs:schema>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="SocialNetworkv3.xsl" type="text/xsl"?>
+<!DOCTYPE Friends>
+<Friends xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLFinalv3.xsd">
+<Person>
+   <Social Gender="Female">Friend</Social>
+   <First>Diana</First>
+   <Last>Prince</Last>
+   <Birthday>1969-05-25</Birthday>
+   <Phone Type="Home">202-555-1212</Phone>
+     <Address>
+       <Street>414 10th Street NW</Street>
+       <City>Washington</City>
+       <State>DC</State>
+       <PostalCode>20012</PostalCode>
+       <Country>US</Country>
+     </Address>
+     <Email>wwjl@gmail.com</Email>
+     <IM Service="AOL">wonderw</IM>
+</Person>
+<Person>
+  <Social Gender="Male">Work</Social>
+  <First>Steve</First>
+  <Last>Trevor</Last>
+  <Birthday>1945-09-17</Birthday>
+  <Phone Type="Work">202-453-6868</Phone>
+  <Address>
+      <Street>2400 Nebraska Ave. NW</Street>
+      <City>Washington</City>
+      <State>DC</State>
+      <PostalCode>20017</PostalCode>
+      <Country>US</Country>
+  </Address>
+  <Email>jschurch123@gmail.com</Email>
+  <IM Service="AIM">morph</IM>
+</Person>
+<Person>
+  <Social Gender="Female">Ally</Social>
+  <First>Amanda</First>
+  <Last>King</Last>
+  <Birthday>1960-07-22</Birthday>
+  <Phone Type="Home">703-555-1414</Phone>
+  <Address>
+      <Street>414 25th Street</Street>
+      <City>Arlington</City>
+      <State>VA</State>
+      <PostalCode>22205</PostalCode>
+      <Country>US</Country>
+  </Address>
+  <Email>mrsking@yahoo.com</Email>
+  <IM Service="Jabber">supermom</IM>
+</Person>
+<Person>
+  <Social Gender="Male">Family</Social>
+  <First>Lee</First>
+  <Last>Stetson</Last>
+  <Birthday>1957-05-05</Birthday>
+  <Phone Type="Cell">202-656-1312</Phone>
+  <Address>
+      <Street>2425 Massachusetts Ave. NW</Street>
+      <City>Washington</City>
+      <State>DC</State>
+      <PostalCode>20010</PostalCode>
+      <Country>US</Country>
+  </Address>
+  <Email>scarecrow@aol.com</Email>
+  <IM Service="Google">scarecrow</IM>
+</Person>
+<Person>
+  <Social Gender="Male">Friend</Social>
+  <First>Popeye</First>
+  <Last>Sailorman</Last>
+  <Birthday>1925-05-17</Birthday>
+  <Phone Type="Home">202-656-1333</Phone>
+  <Address>
+      <Street>3131 Massachusetts Ave. NW</Street>
+      <City>Washington</City>
+      <State>DC</State>
+      <PostalCode>20010</PostalCode>
+      <Country>US</Country>
+  </Address>
+  <Email>spinach@aol.com</Email>
+  <IM Service="Google">popeye</IM>
+</Person>
+</Friends>
