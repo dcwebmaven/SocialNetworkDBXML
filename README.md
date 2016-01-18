@@ -8,12 +8,12 @@ Personal Information Manager (PIM)
 Throughout the course lessons, you learned how to use XML and XSL to create meaningful applications. Now you're ready to create your final XML application of: a personal information manager, or PIM.
 A PIM keeps track of your contact information in an clear, manageable format. Typical entries include:
 
-First Name
-Last Name
-Home Phone
-Work Phone
-Cell Phone
-Address
+First Name,
+Last Name,
+Home Phone,
+Work Phone,
+Cell Phone,
+Address,
 Email Address
 
 Depending on your data, there may be many more or slightly different entries. For your final project, you'll define a format for your PIM information to be stored in XML. You'll create XSL documents to translate your source XML into HTML, and create a schema.
